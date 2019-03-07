@@ -1650,7 +1650,7 @@ GameObject:
   - component: {fileID: 1075072584}
   - component: {fileID: 1075072585}
   m_Layer: 0
-  m_Name: "\u53D1\u73B0\u76F8\u673A"
+  m_Name: "\u53D1\u73B0\u7269\u4EF6"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1852,7 +1852,7 @@ MonoBehaviour:
   toPositionOLD: {x: 0, y: 0, z: 0}
 --- !u!114 &1075072584
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1871,7 +1871,7 @@ MonoBehaviour:
     integerVal: 999
 --- !u!114 &1075072585
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
