@@ -446,8 +446,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1726953623
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 434cf0a5de57e62429f7c13f4a0d77d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1613,6 +1613,7 @@ GameObject:
   - component: {fileID: 1075072580}
   - component: {fileID: 1075072579}
   - component: {fileID: 1075072578}
+  - component: {fileID: 1075072581}
   - component: {fileID: 1075072577}
   m_Layer: 0
   m_Name: Flowchart
@@ -1623,18 +1624,24 @@ GameObject:
   m_IsActive: 1
 --- !u!114 &1075072577
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075072576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d1724bb98f694376b7653fa24a54541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 1075072578}
-  waitForFrames: 1
+  itemId: 1
+  indentLevel: 0
+  targetSprites:
+  - {fileID: 1150434939}
+  - {fileID: 713917052}
+  orderInLayer:
+    integerRef: {fileID: 0}
+    integerVal: 999
 --- !u!114 &1075072578
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1658,8 +1665,9 @@ MonoBehaviour:
   itemId: 0
   blockName: New Block
   description: 
-  eventHandler: {fileID: 1075072577}
-  commandList: []
+  eventHandler: {fileID: 1075072581}
+  commandList:
+  - {fileID: 1075072577}
 --- !u!114 &1075072579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1684,8 +1692,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1075072578}
+  selectedCommands:
+  - {fileID: 1075072577}
   variables: []
   description: 
   stepPause: 0
@@ -1711,6 +1721,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1075072581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075072576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49012bdc794e429686c1eff7d9ced90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1075072578}
+  clickableObject: {fileID: 1150434941}
+  waitFrames: 1
 --- !u!1 &1106741599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,6 +1826,7 @@ GameObject:
   - component: {fileID: 1150434938}
   - component: {fileID: 1150434939}
   - component: {fileID: 1150434940}
+  - component: {fileID: 1150434941}
   m_Layer: 0
   m_Name: "\u76F8\u6A5F-\u573A\u666F\u5185"
   m_TagString: Untagged
@@ -1816,7 +1842,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150434937}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.294, y: -4.227, z: 0}
+  m_LocalPosition: {x: -0.343, y: -3.753, z: 0}
   m_LocalScale: {x: 0.315206, y: 0.315206, z: 0.315206}
   m_Children:
   - {fileID: 713917051}
@@ -1897,6 +1923,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4001839, y: 1.63}
   m_EdgeRadius: 0
+--- !u!114 &1150434941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150434937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc03961113fa349c09cb06ef2911013d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickEnabled: 1
+  hoverCursor: {fileID: 0}
+  useEventSystem: 0
 --- !u!1 &1231641342
 GameObject:
   m_ObjectHideFlags: 0
