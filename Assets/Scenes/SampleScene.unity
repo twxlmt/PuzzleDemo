@@ -1651,6 +1651,7 @@ GameObject:
   - component: {fileID: 1075072585}
   - component: {fileID: 1075072587}
   - component: {fileID: 1075072586}
+  - component: {fileID: 1075072588}
   m_Layer: 0
   m_Name: "\u53D1\u73B0\u7269\u4EF6"
   m_TagString: Untagged
@@ -1691,8 +1692,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 72
-    y: 71
+    x: 73
+    y: 69
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1709,6 +1710,7 @@ MonoBehaviour:
   - {fileID: 1075072585}
   - {fileID: 1075072587}
   - {fileID: 1075072586}
+  - {fileID: 1075072588}
 --- !u!114 &1075072579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1736,7 +1738,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1075072578}
   selectedCommands:
-  - {fileID: 1075072586}
+  - {fileID: 1075072588}
   variables: []
   description: 
   stepPause: 0
@@ -1977,6 +1979,27 @@ MonoBehaviour:
   isLocal: 0
   toTransformOLD: {fileID: 0}
   toPositionOLD: {x: 0, y: 0, z: 0}
+--- !u!114 &1075072588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075072576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d81be3d7e84da460788dccea95a3313a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 1150434937}
+  destroyInXSeconds:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  targetGameObjectOLD: {fileID: 0}
 --- !u!1 &1106741599
 GameObject:
   m_ObjectHideFlags: 0
